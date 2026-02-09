@@ -74,51 +74,99 @@
     li {
       margin-bottom: 8px;
     }
+
+    /* Added for your photo/header block */
+    .profile {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 10px;
+    }
+
+    .profile img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #ddd;
+      background: #fff;
+    }
+
+    .profile-text {
+      flex: 1;
+    }
+
+    .contact-links {
+      margin: 8px 0 14px 0;
+      font-size: 0.95em;
+    }
+
+    .contact-links a {
+      color: #0066cc;
+      text-decoration: none;
+      margin-right: 12px;
+      word-break: break-word;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile img {
+        width: 160px;
+        height: 160px;
+      }
+    }
   </style>
 </head>
 
-
-
-  
 <body>
   <div class="page-overlay">
     <div class="container">
 
       <div class="intro">
 
-      <div class="profile">
-        <img src="ZoomedGSPhoto.jpg" alt="Sean Byrne">
+        <div class="profile">
+          <img src="ZoomedGSPhoto.jpg" alt="Sean Byrne">
 
-        <div class="profile-text">
-          <h1>Sean Byrne</h1>
+          <div class="profile-text">
+            <h1>Sean Byrne</h1>
 
-          <p class="tagline">
-            PhD Candidate, Experimental Nuclear Physics · UMass Lowell · Gamma-ray spectroscopy · Nuclear astrophysics
-          </p>
+            <p class="tagline">
+              PhD Candidate, Experimental Nuclear Physics · UMass Lowell · Gamma-ray spectroscopy · Nuclear astrophysics
+            </p>
 
-        
-        <div class="contact-links">
-          <a href="mailto:SeanByrne@uml.edu">SeanByrne@uml.edu</a>
-          <a href="Sean_Byrne_CV.pdf" target="_blank">CV</a>
-          <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/ByrneS45" target="_blank">GitHub</a>
+            <div class="contact-links">
+              <a href="mailto:SeanByrne@uml.edu">SeanByrne@uml.edu</a>
+              <a href="Sean_Byrne_CV.pdf" target="_blank">CV</a>
+              <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/ByrneS45" target="_blank">GitHub</a>
+            </div>
+
+            <p>
+              I’m a PhD candidate in Experimental Nuclear Physics at the University of Massachusetts Lowell in Dr. Andrew
+              Rogers’ group. My work uses gamma-ray spectroscopy and coincidence techniques to extract nuclear structure
+              information and constrain astrophysical reaction rates relevant to nucleosynthesis (including supernova-relevant
+              temperatures).
+            </p>
+
+            <p>
+              I build analysis workflows in C++ (ROOT) and Python for detector calibration, peak fitting, γ–γ coincidence
+              spectra, and uncertainty propagation. I also develop numerical tools to calculate non-resonant and resonant
+              thermonuclear reaction rates (narrow resonance and broader contributions), including penetrability and width
+              calculations.
+            </p>
+          </div>
         </div>
 
-
-        
-        <p>
-          I’m a PhD candidate in Experimental Nuclear Physics at the University of Massachusetts Lowell in Dr. Andrew
-          Rogers’ group. My work uses gamma-ray spectroscopy and coincidence techniques to extract nuclear structure
-          information and constrain astrophysical reaction rates relevant to nucleosynthesis (including supernova-relevant
-          temperatures).
-        </p>
-
-        <p>
-          I build analysis workflows in C++ (ROOT) and Python for detector calibration, peak fitting, γ–γ coincidence
-          spectra, and uncertainty propagation. I also develop numerical tools to calculate non-resonant and resonant
-          thermonuclear reaction rates (narrow resonance and broader contributions), including penetrability and width
-          calculations.
-        </p>
       </div>
 
       <div class="section">
@@ -294,6 +342,11 @@
           <li>Vice President, Graduate Physics Association (2025–2026)</li>
           <li>President, Student Veterans Organization (UML) (2021–2022)</li>
         </ul>
-      </di
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
 
 
