@@ -1,118 +1,170 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sean Byrne - Fun</title>
+  <title>Sean Byrne</title>
+
   <style>
-  
+    /* --- Background image for the whole page --- */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
+
+      /* Update this path to your image location */
+      background-image: url("assets/images/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* Dark overlay so text stays readable */
+    .page-overlay {
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.50);
+      padding: 30px 15px;
+      box-sizing: border-box;
+    }
+
+    /* Centered content card */
+    .container {
       max-width: 900px;
-      margin: auto;
-      padding: 20px;
+      margin: 0 auto;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
+
     h1, h2, h3 {
-      color: #333;
+      color: #222;
+      margin-top: 0;
     }
+
     h1 {
       border-bottom: 2px solid #444;
-      padding-bottom: 5px;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
     }
+
     .section {
       margin-bottom: 30px;
     }
+
     .subsection {
       margin-bottom: 15px;
     }
+
     ul {
       margin-top: 5px;
       margin-bottom: 15px;
     }
+
     .contact p {
       margin: 2px 0;
     }
+
+    /* Nice intro header spacing */
+    .intro {
+      margin-bottom: 26px;
+    }
+
+    .tagline {
+      margin-top: -6px;
+      color: #444;
+    }
   </style>
 </head>
+
 <body>
+  <div class="page-overlay">
+    <div class="container">
 
-  <h1>Sean Byrne</h1>
+      <div class="intro">
+        <h1>Sean Byrne</h1>
+        <p class="tagline">
+          PhD Candidate, Experimental Nuclear Physics · UMass Lowell · Gamma-ray spectroscopy · Nuclear astrophysics
+        </p>
 
-  <div class="contact">
-  
-  </div>
+        <p>
+          I’m a PhD candidate in Experimental Nuclear Physics at the University of Massachusetts Lowell in Dr. Andrew
+          Rogers’ group. My work uses gamma-ray spectroscopy and coincidence techniques to extract nuclear structure
+          information and constrain astrophysical reaction rates relevant to nucleosynthesis (including supernova-relevant
+          temperatures).
+        </p>
 
-  <div class="section">
-    <h2>Education</h2>
-    <div class="subsection">
-      <p><strong></p>
+        <p>
+          I build analysis workflows in C++ (ROOT) and Python for detector calibration, peak fitting, γ–γ coincidence
+          spectra, and uncertainty propagation. I also develop numerical tools to calculate non-resonant and resonant
+          thermonuclear reaction rates (narrow resonance and broader contributions), including penetrability and width
+          calculations.
+        </p>
+      </div>
+
+      <div class="contact">
+        <!-- Optional: add contact links here -->
+        <!-- <p>Email: you@uml.edu</p> -->
+        <!-- <p>GitHub: <a href="https://github.com/byrnes45">github.com/byrnes45</a></p> -->
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <div class="subsection">
+          <p><strong></strong></p>
+        </div>
+        <div class="subsection">
+          <ul></ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Honors and Awards</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Research Experience</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Professional Experience</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Presentations & Posters</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Summer Schools / Workshops</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Community Service</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Computer & Lab Skills</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Leadership & Activities</h2>
+        <ul></ul>
+      </div>
+
     </div>
-    <div class="subsection">
-     
-      <ul>
-       
-      </ul>
-    </div>
   </div>
-
-  <div class="section">
-    <h2>Honors and Awards</h2>
-    <ul>
-
-
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Research Experience</h2>
-    <ul>
-
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Professional Experience</h2>
-    <ul>
-
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Presentations & Posters</h2>
-    <ul>
-
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Summer Schools / Workshops</h2>
-    <ul>
-
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Community Service</h2>
-    <ul>
-
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Computer & Lab Skills</h2>
-    <ul>
-  
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Leadership & Activities</h2>
-    <ul>
-
-    </ul>
-  </div>
-
 </body>
 </html>
+
