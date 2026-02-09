@@ -1,123 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sean Byrne | Experimental Nuclear Astrophysicist</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sean Byrne</title>
+
   <style>
+    /* --- Background image for the whole page --- */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
       line-height: 1.6;
-      background: #f4f4f4;
-      color: #333;
+
+      /* Update this path to your image location */
+      background-image: url("beatleguese.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
-    header {
-      background: #175E17;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
+
+    /* Dark overlay so text stays readable */
+    .page-overlay {
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.50);
+      padding: 30px 15px;
+      box-sizing: border-box;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+
+    /* Centered content card */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
+
+    h1, h2, h3 {
+      color: #222;
+      margin-top: 0;
     }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+
+    h1 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
     }
-    section {
-      margin-bottom: 2rem;
+
+    .section {
+      margin-bottom: 30px;
     }
-    h2 {
-      color: #122e4a;
+
+    .subsection {
+      margin-bottom: 15px;
     }
-    a {
-      color: #122e4a;
-      text-decoration: none;
+
+    ul {
+      margin-top: 5px;
+      margin-bottom: 15px;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .contact p {
+      margin: 2px 0;
     }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      background: #ddd;
+
+    /* Nice intro header spacing */
+    .intro {
+      margin-bottom: 26px;
+    }
+
+    .tagline {
+      margin-top: -6px;
+      color: #444;
     }
   </style>
 </head>
+
 <body>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="cv.html">CV</a> |
-    <a href="research.html">Research</a> |
-    <a href="Activities.html">Activities</a> |
-  </nav>
-  
-  <header>
-    <h1>Sean Byrne</h1>
-    <p>Experimental Nuclear Physicist | USMC Veteran </p>
-  </header>
+  <div class="page-overlay">
+    <div class="container">
 
-  <main>
-    <section id="about">
-  <h2>About</h2>
-  <p>
-    I’m Sean Byrne, a PhD candidate in Experimental Nuclear Physics at the University of Massachusetts Lowell,
-    working in Dr. Andrew Rogers’ group. My research focuses on gamma-ray spectroscopy and nuclear structure
-    measurements that inform reaction rates in astrophysical environments, with a particular interest in
-    nucleosynthesis and supernova-relevant temperatures.
-  </p>
-  <p>
-    I develop analysis workflows in C++ (ROOT) and Python for high-resolution γ-ray spectroscopy,
-    including peak fitting, coincidence analysis, detector calibration, and uncertainty propagation.
-    I also use numerical tools to calculate non-resonant and resonant thermonuclear reaction rates,
-    incorporating penetrability, partial widths, and narrow/broad resonance formalisms.
-  </p>
-  <p>
-    Before graduate school I served in the United States Marine Corps, and I bring that same
-    discipline and mission focus to research, collaboration, and technical problem solving.
-  </p>
-</section>
+      <div class="intro">
+        <h1>Sean Byrne</h1>
+        <p class="tagline">
+          PhD Candidate, Experimental Nuclear Physics · UMass Lowell · Gamma-ray spectroscopy · Nuclear astrophysics
+        </p>
 
-<section>
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Experimental nuclear physics & gamma-ray spectroscopy</li>
-    <li>Nuclear astrophysics: resonance structure and reaction-rate constraints</li>
-    <li>Detector calibration, coincidence methods, and background suppression</li>
-    <li>Computational analysis in C++/ROOT and Python</li>
-  </ul>
-</section>
+        <p>
+          I’m a PhD candidate in Experimental Nuclear Physics at the University of Massachusetts Lowell in Dr. Andrew
+          Rogers’ group. My work uses gamma-ray spectroscopy and coincidence techniques to extract nuclear structure
+          information and constrain astrophysical reaction rates relevant to nucleosynthesis (including supernova-relevant
+          temperatures).
+        </p>
 
-<section>
-  <h2>Current Work</h2>
-  <p>
-    Recently, I’ve been modeling thermonuclear (p,γ) reaction rates for supernova-relevant temperatures,
-    combining direct-capture and resonance contributions, and comparing how structure inputs (e.g., spectroscopic
-    factors) propagate into rate uncertainties.
-  </p>
-</section>
+        <p>
+          I build analysis workflows in C++ (ROOT) and Python for detector calibration, peak fitting, γ–γ coincidence
+          spectra, and uncertainty propagation. I also develop numerical tools to calculate non-resonant and resonant
+          thermonuclear reaction rates (narrow resonance and broader contributions), including penetrability and width
+          calculations.
+        </p>
+      </div>
 
-    <section id="links">
-      <h2>Links</h2>
-      <ul>
-        <li><a href="https://github.com/ByrneS45" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/sean-byrne-8b1750122/" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:sean_byrne@uml.edu">Email Me</a></li>
-      </ul>
-    </section>
-  </main>
+      <div class="contact">
+        <!-- Optional: add contact links here -->
+        <!-- <p>Email: you@uml.edu</p> -->
+        <!-- <p>GitHub: <a href="https://github.com/byrnes45">github.com/byrnes45</a></p> -->
+      </div>
 
-  <footer>
-    &copy; 2025 Sean Byrne. All rights reserved.
-  </footer>
+      <div class="section">
+        <h2>Education</h2>
+        <div class="subsection">
+          <p><strong></strong></p>
+        </div>
+        <div class="subsection">
+          <ul></ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Honors and Awards</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Research Experience</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Professional Experience</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Presentations & Posters</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Summer Schools / Workshops</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Community Service</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Computer & Lab Skills</h2>
+        <ul></ul>
+      </div>
+
+      <div class="section">
+        <h2>Leadership & Activities</h2>
+        <ul></ul>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
+
