@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sean Byrne</title>
 
   <style>
@@ -14,8 +14,8 @@
 
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #000;
+      line-height: 1.55;
+      background-color: #000; /* fallback */
       background-image: url("CassiopeiaA.png");
       background-size: cover;
       background-position: center;
@@ -30,11 +30,11 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 880px;
       margin: 0 auto;
       padding: 24px;
       background: rgba(255, 255, 255, 0.92);
-      border-radius: 14px;
+      border-radius: 10px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
@@ -75,7 +75,7 @@
       margin-bottom: 8px;
     }
 
-    /* Added for your photo/header block */
+    /* Profile block */
     .profile {
       display: flex;
       align-items: flex-start;
@@ -133,22 +133,26 @@
     <div class="container">
 
       <div class="intro">
-
         <div class="profile">
-          <img src="ZoomedGSPhoto.jpg" alt="Sean Byrne">
+          <img src="ZoomedGSPhoto.jpg" alt="Sean Byrne headshot" />
 
           <div class="profile-text">
             <h1>Sean Byrne</h1>
 
             <p class="tagline">
-              PhD Candidate, Experimental Nuclear Physics · UMass Lowell · Gamma-ray spectroscopy · Nuclear astrophysics
+              PhD Candidate, Experimental Nuclear Physics · Nuclear data analysis · Reaction-rate modeling · Gamma-ray spectroscopy
             </p>
 
             <div class="contact-links">
               <a href="mailto:SeanByrne@uml.edu">SeanByrne@uml.edu</a>
-              <a href="PostDoc_CV.pdf" target="_blank">CV</a>
-              <a href="www.linkedin.com/in/sean-byrne-8b1750122" target="_blank">LinkedIn</a>
-              <a href="https://github.com/ByrneS45" target="_blank">GitHub</a>
+
+              <!-- Cache-proof CV link: rename the PDF if possible (best), plus version query -->
+              <a href="PostDoc_CV_2026.pdf" target="_blank" rel="noopener">CV</a>
+
+              <!-- Fixed LinkedIn URL (added https://) -->
+              <a href="https://www.linkedin.com/in/sean-byrne-8b1750122" target="_blank" rel="noopener">LinkedIn</a>
+
+              <a href="https://github.com/ByrneS45" target="_blank" rel="noopener">GitHub</a>
             </div>
 
             <p>
@@ -164,9 +168,17 @@
               thermonuclear reaction rates (narrow resonance and broader contributions), including penetrability and width
               calculations.
             </p>
+
+            <!-- Added: Nuclear data + computational focus (postdoc-aligned) -->
+            <p>
+              My research places a strong emphasis on nuclear data: translating experimental observables into reaction
+              and decay information, validating results against evaluated datasets (e.g., ENSDF/NNDC), and developing
+              reproducible analysis pipelines. I am particularly interested in modern computational approaches—including
+              automation and emerging machine-learning tools—to accelerate nuclear data analysis and improve accessibility
+              for the broader community.
+            </p>
           </div>
         </div>
-
       </div>
 
       <div class="section">
@@ -184,7 +196,7 @@
         </div>
 
         <div class="subsection">
-          <p><strong>Central Connecticut State University</strong> — B.S. Physics & Biomolecular Science (Magna Cum Laude)</p>
+          <p><strong>Central Connecticut State University</strong> — B.S. Physics &amp; Biomolecular Science (Magna Cum Laude)</p>
           <ul>
             <li>Minors: Mathematics, Chemistry</li>
           </ul>
@@ -208,29 +220,30 @@
         <h2>Research Experience</h2>
         <ul>
           <li>
-            <strong>57Ni(p,γ)58Cu in the νp Process</strong> (2023–2026) — UML / Argonne National Laboratory<br>
-            Gamma-ray spectroscopy experiment using GAMMASPHERE (74 HPGe detectors); constructed level schemes,
-            angular distributions, and assessed astrophysical impact using WinNet reaction networks.
+            <strong>57Ni(p,γ)58Cu in the νp Process</strong> (2023–2026) — UML / Argonne National Laboratory<br />
+            Gamma-ray spectroscopy experiment using GAMMASPHERE (74 HPGe detectors); constructed level schemes
+            and angular distributions, and translated experimental structure information into reaction-rate constraints
+            using WinNet reaction networks.
           </li>
 
           <li>
-            <strong>Constraining the Half-Life of 72Rb</strong> (2021–2023) — UML<br>
+            <strong>Constraining the Half-Life of 72Rb</strong> (2021–2023) — UML<br />
             Analyzed NSCL DDAS data with ROOT; applied TOF methods and LISE++ corrections; modeled astrophysical
             implications using MESA and OneZone.
           </li>
 
           <li>
-            <strong>Accretion Disk Effects in X-ray Transient Binaries</strong> (2018–2020) — Yale University<br>
+            <strong>Accretion Disk Effects in X-ray Transient Binaries</strong> (2018–2020) — Yale University<br />
             Multi-night CCD observations (Palomar, LCO); statistical modeling of eclipsing light curves.
           </li>
 
           <li>
-            <strong>RR Lyrae as Tracers of Ultra-Faint Dwarf Galaxies</strong> (2017–2018) — Yale University<br>
+            <strong>RR Lyrae as Tracers of Ultra-Faint Dwarf Galaxies</strong> (2017–2018) — Yale University<br />
             Analysis of large public RR Lyrae datasets.
           </li>
 
           <li>
-            <strong>Biomolecular & Microbiology Research</strong> (2017–2019)<br>
+            <strong>Biomolecular &amp; Microbiology Research</strong> (2017–2019)<br />
             Heat shock protein expression in planarian regeneration and biofilm studies in <em>A. baumannii</em>.
           </li>
         </ul>
@@ -240,24 +253,24 @@
         <h2>Professional Experience</h2>
         <ul>
           <li>
-            <strong>Research Assistant — University of Massachusetts Lowell</strong> (2022–Present)<br>
+            <strong>Research Assistant — University of Massachusetts Lowell</strong> (2022–Present)<br />
             Designed and executed nuclear physics experiments at national laboratories; developed C++/ROOT and
             Python analysis pipelines; performed reaction-network modeling and sensitivity studies.
           </li>
 
           <li>
-            <strong>Teaching Assistant — University of Massachusetts Lowell</strong> (2020–2022)<br>
+            <strong>Teaching Assistant — University of Massachusetts Lowell</strong> (2020–2022)<br />
             Taught undergraduate physics labs and recitations; emphasized experimental methods, uncertainty
             analysis, and scientific reporting.
           </li>
 
           <li>
-            <strong>Tutor — CCSU Learning Center</strong> (2018–2020)<br>
+            <strong>Tutor — CCSU Learning Center</strong> (2018–2020)<br />
             Tutored physics, chemistry, biology, and mathematics through Calculus III.
           </li>
 
           <li>
-            <strong>Combat Engineer (Sergeant, E-5) — United States Marine Corps</strong> (2013–2018)<br>
+            <strong>Combat Engineer (Sergeant, E-5) — United States Marine Corps</strong> (2013–2018)<br />
             Led engineering teams; served as Safety and Training Officer; coordinated logistics and infrastructure
             projects under strict operational constraints.
           </li>
@@ -291,7 +304,7 @@
       </div>
 
       <div class="section">
-        <h2>Presentations & Posters</h2>
+        <h2>Presentations &amp; Posters</h2>
         <ul>
           <li>APS DNP (2025) — 57Ni(p,γ)58Cu in the νp process</li>
           <li>GRC Nuclear Chemistry (2025) — 57Ni(p,γ)58Cu in the νp process</li>
@@ -323,19 +336,20 @@
       </div>
 
       <div class="section">
-        <h2>Computer & Lab Skills</h2>
+        <h2>Computer &amp; Lab Skills</h2>
         <ul>
           <li><strong>Programming:</strong> Python, C++, ROOT, Bash, Git/GitHub, LaTeX</li>
-          <li><strong>Analysis:</strong> γ-ray spectroscopy, coincidence analysis, peak fitting, efficiency calibration,
-              uncertainty propagation, Monte Carlo methods</li>
+          <li><strong>Analysis &amp; Nuclear Data:</strong> γ-ray spectroscopy, coincidence analysis, peak fitting, efficiency calibration,
+              uncertainty propagation, Monte Carlo methods; use of evaluated nuclear data resources (ENSDF/NNDC)</li>
           <li><strong>Modeling:</strong> MESA, WinNet, OneZone, RatesMC; reaction networks and sensitivity studies</li>
+          <li><strong>Machine Learning (Foundational):</strong> labeled datasets, feature preparation, model validation concepts; interest in ML-assisted nuclear data analysis</li>
           <li><strong>Instrumentation:</strong> HPGe detectors, scintillators, DDAS, NIM electronics, oscilloscopes</li>
           <li><strong>Scientific Tools:</strong> RadWare, LISE++, IRAF</li>
         </ul>
       </div>
 
       <div class="section">
-        <h2>Leadership & Activities</h2>
+        <h2>Leadership &amp; Activities</h2>
         <ul>
           <li>Co-Chair, Gordon Research Seminar (2025–2027)</li>
           <li>Committee Member, ARUNA Early Career Research Committee (2025–2027)</li>
@@ -349,5 +363,3 @@
   </div>
 </body>
 </html>
-
-
