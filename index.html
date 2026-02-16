@@ -129,23 +129,106 @@
     /* =========================
        Explosive Nucleosynthesis Section
        ========================= */
-    .na-wrap { max-width: 1100px; margin: 0 auto; padding: 2.2rem 0.25rem; }
-    .na-hero { display: grid; gap: 1.25rem; grid-template-columns: 1.15fr 0.85fr; align-items: start; }
-    .na-hero h2 { margin: 0 0 0.5rem 0; font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
-    .na-hero p { margin: 0.4rem 0; line-height: 1.55; }
-    .na-cards { display: grid; gap: 1.1rem; grid-template-columns: repeat(3, 1fr); margin-top: 1.25rem; }
-    .na-cards.two { grid-template-columns: repeat(2, 1fr); }
-    .na-card { border: 1px solid rgba(0,0,0,0.12); border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.9); }
-    .na-card figure { margin: 0; }
-    .na-card img { width: 100%; height: 230px; object-fit: cover; display: block; }
-    .na-card .na-body { padding: 1rem 1rem 1.1rem 1rem; }
-    .na-card h3 { margin: 0 0 0.5rem 0; font-size: 1.1rem; }
-    .na-card p { margin: 0.35rem 0; line-height: 1.55; }
-    .na-card figcaption { padding: 0.6rem 1rem 0.9rem 1rem; font-size: 0.85rem; line-height: 1.4; color: rgba(0,0,0,0.75); }
-    .na-card a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-    .na-note { margin-top: 0.85rem; font-size: 0.95rem; color: rgba(0,0,0,0.85); }
-    .na-pill { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 999px; border: 1px solid rgba(0,0,0,0.14); font-size: 0.85rem; margin: 0.15rem 0.35rem 0.15rem 0; }
-    .na-divider { margin: 1.35rem 0 0.85rem 0; border: none; height: 1px; background: rgba(0,0,0,0.12); }
+    .na-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.2rem 0.25rem;
+    }
+
+    .na-hero {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: start;
+    }
+
+    .na-hero h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    }
+
+    .na-hero p {
+      margin: 0.4rem 0;
+      line-height: 1.55;
+    }
+
+    .na-cards {
+      display: grid;
+      gap: 1.1rem;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 1.25rem;
+    }
+
+    .na-cards.two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .na-card {
+      border: 1px solid rgba(0,0,0,0.12);
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.9);
+    }
+
+    .na-card figure {
+      margin: 0;
+    }
+
+    .na-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .na-card .na-body {
+      padding: 1rem 1rem 1.1rem 1rem;
+    }
+
+    .na-card h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .na-card p {
+      margin: 0.35rem 0;
+      line-height: 1.55;
+    }
+
+    .na-card figcaption {
+      padding: 0.6rem 1rem 0.9rem 1rem;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: rgba(0,0,0,0.75);
+    }
+
+    .na-card a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .na-note {
+      margin-top: 0.85rem;
+      font-size: 0.95rem;
+      color: rgba(0,0,0,0.85);
+    }
+
+    .na-pill {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.14);
+      font-size: 0.85rem;
+      margin: 0.15rem 0.35rem 0.15rem 0;
+    }
+
+    .na-divider {
+      margin: 1.35rem 0 0.85rem 0;
+      border: none;
+      height: 1px;
+      background: rgba(0,0,0,0.12);
+    }
 
     @media (max-width: 920px) {
       .na-hero { grid-template-columns: 1fr; }
@@ -204,7 +287,7 @@
       </div>
 
       <!-- =========================
-           Explosive Nucleosynthesis Section (with pathways)
+           Explosive Nucleosynthesis Section (fixed links)
            ========================= -->
       <section id="explosive-nucleosynthesis">
         <div class="na-wrap">
@@ -237,7 +320,7 @@
             <div class="na-card">
               <figure>
                 <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/SolarSystemAbundances.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e6/SolarSystemAbundances.png"
                   alt="Solar-system elemental abundances vs atomic number"
                   loading="lazy"
                 />
@@ -262,14 +345,14 @@
             <div class="na-card">
               <figure>
                 <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Crab_Nebula.jpg"
+                  src="https://upload.wikimedia.org/wikipedia/commons/0/00/Crab_Nebula.jpg"
                   alt="Crab Nebula (supernova remnant) mosaic"
                   loading="lazy"
                 />
                 <figcaption>
                   Crab Nebula (M1), supernova remnant. Source:
                   <a href="https://commons.wikimedia.org/wiki/File:Crab_Nebula.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License: <strong>Public Domain</strong> (NASA/ESA Hubble; credit NASA/STScI/ESA). 
+                  License: <strong>Public Domain</strong> (NASA/ESA Hubble; credit NASA/STScI/ESA).
                 </figcaption>
               </figure>
               <div class="na-body">
@@ -284,7 +367,7 @@
             <div class="na-card">
               <figure>
                 <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Cassiopeia_A-_Cassiopeia_A_in_Many_Colors_(2941486784).jpg"
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/96/Cassiopeia_A-_Cassiopeia_A_in_Many_Colors_%282941486784%29.jpg"
                   alt="Cassiopeia A supernova remnant composite"
                   loading="lazy"
                 />
@@ -306,7 +389,7 @@
             <div class="na-card">
               <figure>
                 <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/R-process.svg"
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/R-process.svg?width=900"
                   alt="r-process schematic"
                   loading="lazy"
                   style="object-fit: contain; background: rgba(255,255,255,0.95);"
@@ -334,16 +417,16 @@
             <div class="na-card">
               <figure>
                 <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Nucleosynthesis_periodic_table.svg"
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Nucleosynthesis_periodic_table.svg?width=1200"
                   alt="Periodic table showing origins of elements"
                   loading="lazy"
                   style="object-fit: contain; background: rgba(255,255,255,0.98);"
                 />
                 <figcaption>
-                  Periodic table showing the origins of Solar-System elements (inspired by work compiled by Jennifer Johnson). Source:
+                  Periodic table showing the origins of Solar-System elements. Source:
                   <a href="https://commons.wikimedia.org/wiki/File:Nucleosynthesis_periodic_table.svg" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License:
-                  <a href="https://en.wikipedia.org/wiki/GNU_Free_Documentation_License" target="_blank" rel="noopener">GFDL 1.2+</a>.
+                  License (see file page for exact version):
+                  <a href="https://en.wikipedia.org/wiki/GNU_Free_Documentation_License" target="_blank" rel="noopener">GFDL</a>.
                 </figcaption>
               </figure>
               <div class="na-body">
@@ -358,7 +441,7 @@
             <div class="na-card">
               <figure>
                 <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/S_and_r_process.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/1d/S_and_r_process.png"
                   alt="s-process vs r-process schematic chart"
                   loading="lazy"
                   style="object-fit: contain; background: rgba(255,255,255,0.98);"
@@ -383,13 +466,13 @@
             <div class="na-card">
               <figure>
                 <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Isotopic_Abundance_bubble_chart.png"
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Isotopic_Abundance_bubble_chart.png?width=1200"
                   alt="Bubble chart of isotopic abundances"
                   loading="lazy"
                   style="object-fit: contain; background: rgba(255,255,255,0.98);"
                 />
                 <figcaption>
-                  Bubble chart of isotopic abundances (area ∝ abundance; color indicates origin categories). Source:
+                  Bubble chart of isotopic abundances. Source:
                   <a href="https://commons.wikimedia.org/wiki/File:Isotopic_Abundance_bubble_chart.png" target="_blank" rel="noopener">Wikimedia Commons</a>.
                   License:
                   <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
@@ -440,7 +523,8 @@
           </div>
 
           <p class="na-note">
-            Pathway cheat sheet: <span class="na-pill">s = slow n-capture</span>
+            Pathway cheat sheet:
+            <span class="na-pill">s = slow n-capture</span>
             <span class="na-pill">i = intermediate n-capture</span>
             <span class="na-pill">r = rapid n-capture</span>
             <span class="na-pill">rp = rapid p-capture</span>
@@ -452,7 +536,6 @@
       <!-- =========================
            End Explosive Nucleosynthesis Section
            ========================= -->
-
 
       <div class="section">
         <h2>Education</h2>
@@ -613,7 +696,7 @@
         <ul>
           <li><strong>Programming:</strong> Python, C++, ROOT, Bash, Git/GitHub, LaTeX</li>
           <li><strong>Analysis &amp; Nuclear Data:</strong> γ-ray spectroscopy, coincidence analysis, peak fitting, efficiency calibration,
-              uncertainty propagation, Monte Carlo methods; use of evaluated nuclear data resources (ENSDF/NNDC)</li>
+            uncertainty propagation, Monte Carlo methods; use of evaluated nuclear data resources (ENSDF/NNDC)</li>
           <li><strong>Modeling:</strong> MESA, WinNet, OneZone, RatesMC; reaction networks and sensitivity studies</li>
           <li><strong>Machine Learning (Foundational):</strong> labeled datasets, feature preparation, model validation concepts; interest in ML-assisted nuclear data analysis</li>
           <li><strong>Instrumentation:</strong> HPGe detectors, scintillators, DDAS, NIM electronics, oscilloscopes</li>
@@ -636,4 +719,5 @@
   </div>
 </body>
 </html>
+
 
