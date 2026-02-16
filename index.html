@@ -22,24 +22,13 @@
       background-repeat: no-repeat;
     }
 
-    .site-banner {
-      width: 100%;
-      height: 320px;
-      background-image: url("BinarySystem.png");
-      background-size: cover;
-      background-position: center;
-      border-radius: 12px;
-      margin-bottom: 18px;
-      border: 1px solid rgba(255,255,255,0.20);
-    }  
-
     .page-overlay {
       min-height: 100vh;
       background: rgba(0, 0, 0, 0.50);
       padding: 30px 15px;
       box-sizing: border-box;
     }
-    <div class="site-banner"></div>
+
     .container {
       max-width: 880px;
       margin: 0 auto;
@@ -47,6 +36,62 @@
       background: rgba(255, 255, 255, 0.92);
       border-radius: 10px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    /* =========================
+       Banner (BinarySystem.png) + text overlay
+       ========================= */
+    .site-banner {
+      position: relative;
+      width: 100%;
+      height: 320px;
+
+      background-image: url("BinarySystem.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      border-radius: 12px;
+      margin: 0 auto 18px auto;
+      border: 1px solid rgba(255,255,255,0.20);
+      overflow: hidden;
+    }
+
+    /* Dark overlay so text is readable */
+    .site-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.15)
+      );
+    }
+
+    .banner-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 18px 18px 16px 18px;
+      color: #fff;
+      z-index: 1;
+    }
+
+    .banner-title {
+      margin: 0;
+      font-size: 1.7rem;
+      letter-spacing: 0.3px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .banner-subtitle {
+      margin: 6px 0 0 0;
+      font-size: 1.0rem;
+      opacity: 0.95;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
     }
 
     h1, h2, h3 {
@@ -134,6 +179,14 @@
       .profile img {
         width: 160px;
         height: 160px;
+      }
+
+      .site-banner {
+        height: 240px;
+      }
+
+      .banner-title {
+        font-size: 1.35rem;
       }
     }
 
@@ -313,8 +366,16 @@
 
 <body>
   <div class="page-overlay">
-    <div class="container">
 
+    <!-- Banner sits ABOVE the white content box so you see it clearly -->
+    <div class="site-banner">
+      <div class="banner-content">
+        <h2 class="banner-title">Nuclear Astrophysics • Nuclear Structure • Data Analysis</h2>
+        <p class="banner-subtitle">Gamma-ray spectroscopy, reaction-rate modeling, and reproducible pipelines (C++/ROOT + Python)</p>
+      </div>
+    </div>
+
+    <div class="container">
       <!-- =========================
            Original header / intro
            ========================= -->
