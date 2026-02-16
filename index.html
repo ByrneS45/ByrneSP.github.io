@@ -181,6 +181,163 @@
         </div>
       </div>
 
+<!-- =========================
+ Explosive Nucleosynthesis Section
+ Paste into your index.html (or main page)
+========================= -->
+<style>
+  .na-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.25rem; }
+  .na-hero { display: grid; gap: 1.25rem; grid-template-columns: 1.2fr 0.8fr; align-items: start; }
+  .na-hero h2 { margin: 0 0 0.5rem 0; font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+  .na-hero p { margin: 0.4rem 0; line-height: 1.55; }
+  .na-cards { display: grid; gap: 1.25rem; grid-template-columns: repeat(3, 1fr); margin-top: 1.5rem; }
+  .na-card { border: 1px solid rgba(0,0,0,0.12); border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.9); }
+  .na-card figure { margin: 0; }
+  .na-card img { width: 100%; height: 230px; object-fit: cover; display: block; }
+  .na-card .na-body { padding: 1rem 1rem 1.1rem 1rem; }
+  .na-card h3 { margin: 0 0 0.5rem 0; font-size: 1.1rem; }
+  .na-card p { margin: 0.35rem 0; line-height: 1.55; }
+  .na-card figcaption { padding: 0.6rem 1rem 0.9rem 1rem; font-size: 0.85rem; line-height: 1.4; color: rgba(0,0,0,0.75); }
+  .na-card a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  .na-note { margin-top: 1.25rem; font-size: 0.95rem; color: rgba(0,0,0,0.8); }
+  .na-pill { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 999px; border: 1px solid rgba(0,0,0,0.14); font-size: 0.85rem; margin-right: 0.35rem; }
+  @media (max-width: 920px) {
+    .na-hero { grid-template-columns: 1fr; }
+    .na-cards { grid-template-columns: 1fr; }
+    .na-card img { height: 260px; }
+  }
+</style>
+
+<section id="explosive-nucleosynthesis">
+  <div class="na-wrap">
+    <div class="na-hero">
+      <div>
+        <h2>Explosive Nucleosynthesis &amp; the Origin of the Elements</h2>
+        <p>
+          In the final moments of massive stars—and in thermonuclear white-dwarf explosions—temperatures reach billions of kelvin.
+          Nuclear reaction timescales collapse from millions of years to seconds, driving <strong>explosive nucleosynthesis</strong>:
+          rapid burning (O/Ne/Si), α-rich freezeout, and neutron-capture pathways that forge nuclei from the iron group to the actinides.
+        </p>
+        <p>
+          These events eject freshly synthesized material into the interstellar medium, enriching future generations of stars and planets.
+          The <strong>natural abundances</strong> we measure today are a fossil record of these processes: the Big Bang sets H/He,
+          stellar fusion builds up to the iron peak, and explosive events shape the heavy-element tail.
+        </p>
+        <p class="na-note">
+          <span class="na-pill">Core-collapse SNe</span>
+          <span class="na-pill">Type Ia SNe</span>
+          <span class="na-pill">r-process</span>
+          <span class="na-pill">Abundance patterns</span>
+        </p>
+      </div>
+
+      <div class="na-card">
+        <figure>
+          <!-- Solar-system abundances (CC BY-SA) -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e6/SolarSystemAbundances.png"
+            alt="Solar-system elemental abundances vs atomic number"
+            loading="lazy"
+          />
+          <figcaption>
+            Solar-system elemental abundances (log scale). Source:
+            <a href="https://commons.wikimedia.org/wiki/File:SolarSystemAbundances.png" target="_blank" rel="noopener">Wikimedia Commons</a>.
+            License:
+            <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>.
+          </figcaption>
+        </figure>
+        <div class="na-body">
+          <h3>Why abundances look the way they do</h3>
+          <p>
+            The iron peak reflects nuclear binding-energy stability and efficient production in supernova burning.
+            The odd-even effect and heavy-element “tail” encode neutron-capture histories and explosive conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="na-cards">
+      <div class="na-card">
+        <figure>
+          <!-- Crab Nebula (Public Domain per NASA/ESA Hubble) -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/00/Crab_Nebula.jpg"
+            alt="Crab Nebula (supernova remnant) mosaic"
+            loading="lazy"
+          />
+          <figcaption>
+            Crab Nebula (M1), supernova remnant. Source:
+            <a href="https://commons.wikimedia.org/wiki/File:Crab_Nebula.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.
+            License: <strong>Public Domain</strong> (NASA/ESA Hubble; credit NASA/STScI/ESA as requested).
+          </figcaption>
+        </figure>
+        <div class="na-body">
+          <h3>Supernovae: element factories</h3>
+          <p>
+            Shock heating triggers explosive burning, while expanding ejecta seed the galaxy with newly made nuclei—material that later
+            becomes stars, planets, and ultimately us.
+          </p>
+        </div>
+      </div>
+
+      <div class="na-card">
+        <figure>
+          <!-- Cassiopeia A (No known copyright restrictions via Flickr Commons on Commons page) -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/96/Cassiopeia_A-_Cassiopeia_A_in_Many_Colors_%282941486784%29.jpg"
+            alt="Cassiopeia A supernova remnant composite"
+            loading="lazy"
+          />
+          <figcaption>
+            Cassiopeia A composite (IR/optical/X-ray). Source:
+            <a href="https://commons.wikimedia.org/wiki/File:Cassiopeia_A-_Cassiopeia_A_in_Many_Colors_(2941486784).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.
+            Marked “No known copyright restrictions” (Smithsonian Institution / Flickr Commons). Credit line (as listed):
+            NASA/CXC/SAO; NASA/STScI; NASA/JPL-Caltech.
+          </figcaption>
+        </figure>
+        <div class="na-body">
+          <h3>What remnants reveal</h3>
+          <p>
+            Multi-wavelength images map different temperatures and elements in the debris, linking observed structures to explosion
+            dynamics and nucleosynthesis yields.
+          </p>
+        </div>
+      </div>
+
+      <div class="na-card">
+        <figure>
+          <!-- r-process diagram (CC0) -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c7/R-process.svg"
+            alt="r-process schematic"
+            loading="lazy"
+            style="object-fit: contain; background: rgba(255,255,255,0.95);"
+          />
+          <figcaption>
+            r-process schematic. Source:
+            <a href="https://commons.wikimedia.org/wiki/File:R-process.svg" target="_blank" rel="noopener">Wikimedia Commons</a>.
+            License: <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>.
+          </figcaption>
+        </figure>
+        <div class="na-body">
+          <h3>Rapid neutron capture</h3>
+          <p>
+            In extremely neutron-rich conditions, nuclei climb to high mass numbers via fast captures before β-decays return them toward
+            stability—building roughly half of the elements heavier than iron.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+      
       <div class="section">
         <h2>Education</h2>
 
