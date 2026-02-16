@@ -112,65 +112,7 @@
       text-decoration: underline;
     }
 
-    /* =========================
-       Explosive Nucleosynthesis styles
-       (moved into head; sized to fit .container)
-    ========================= */
-    .na-wrap { margin: 0; padding: 0; }
-    .na-hero {
-      display: grid;
-      gap: 1.25rem;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: start;
-      margin-top: 18px;
-    }
-    .na-hero h2 { margin: 0 0 0.5rem 0; font-size: 1.35rem; }
-    .na-hero p { margin: 0.4rem 0; line-height: 1.55; }
-
-    .na-cards {
-      display: grid;
-      gap: 1.25rem;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 1.25rem;
-    }
-
-    .na-card {
-      border: 1px solid rgba(0,0,0,0.12);
-      border-radius: 16px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.92);
-    }
-    .na-card figure { margin: 0; }
-    .na-card img { width: 100%; height: 210px; object-fit: cover; display: block; }
-    .na-card .na-body { padding: 1rem 1rem 1.1rem 1rem; }
-    .na-card h3 { margin: 0 0 0.5rem 0; font-size: 1.05rem; }
-    .na-card p { margin: 0.35rem 0; line-height: 1.55; }
-    .na-card figcaption {
-      padding: 0.6rem 1rem 0.9rem 1rem;
-      font-size: 0.85rem;
-      line-height: 1.4;
-      color: rgba(0,0,0,0.75);
-    }
-    .na-card a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
-    .na-note { margin-top: 1.0rem; font-size: 0.95rem; color: rgba(0,0,0,0.8); }
-    .na-pill {
-      display: inline-block;
-      padding: 0.2rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.14);
-      font-size: 0.85rem;
-      margin-right: 0.35rem;
-      margin-bottom: 0.35rem;
-      background: rgba(255,255,255,0.65);
-    }
-
     /* Mobile */
-    @media (max-width: 900px) {
-      .na-hero { grid-template-columns: 1fr; }
-      .na-cards { grid-template-columns: 1fr; }
-      .na-card img { height: 260px; }
-    }
-
     @media (max-width: 600px) {
       .profile {
         flex-direction: column;
@@ -182,6 +124,34 @@
         width: 160px;
         height: 160px;
       }
+    }
+
+    /* =========================
+       Explosive Nucleosynthesis Section
+       ========================= */
+    .na-wrap { max-width: 1100px; margin: 0 auto; padding: 2.2rem 0.25rem; }
+    .na-hero { display: grid; gap: 1.25rem; grid-template-columns: 1.15fr 0.85fr; align-items: start; }
+    .na-hero h2 { margin: 0 0 0.5rem 0; font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+    .na-hero p { margin: 0.4rem 0; line-height: 1.55; }
+    .na-cards { display: grid; gap: 1.1rem; grid-template-columns: repeat(3, 1fr); margin-top: 1.25rem; }
+    .na-cards.two { grid-template-columns: repeat(2, 1fr); }
+    .na-card { border: 1px solid rgba(0,0,0,0.12); border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.9); }
+    .na-card figure { margin: 0; }
+    .na-card img { width: 100%; height: 230px; object-fit: cover; display: block; }
+    .na-card .na-body { padding: 1rem 1rem 1.1rem 1rem; }
+    .na-card h3 { margin: 0 0 0.5rem 0; font-size: 1.1rem; }
+    .na-card p { margin: 0.35rem 0; line-height: 1.55; }
+    .na-card figcaption { padding: 0.6rem 1rem 0.9rem 1rem; font-size: 0.85rem; line-height: 1.4; color: rgba(0,0,0,0.75); }
+    .na-card a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .na-note { margin-top: 0.85rem; font-size: 0.95rem; color: rgba(0,0,0,0.85); }
+    .na-pill { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 999px; border: 1px solid rgba(0,0,0,0.14); font-size: 0.85rem; margin: 0.15rem 0.35rem 0.15rem 0; }
+    .na-divider { margin: 1.35rem 0 0.85rem 0; border: none; height: 1px; background: rgba(0,0,0,0.12); }
+
+    @media (max-width: 920px) {
+      .na-hero { grid-template-columns: 1fr; }
+      .na-cards { grid-template-columns: 1fr; }
+      .na-cards.two { grid-template-columns: 1fr; }
+      .na-card img { height: 260px; }
     }
   </style>
 </head>
@@ -203,13 +173,8 @@
 
             <div class="contact-links">
               <a href="mailto:SeanByrne@uml.edu">SeanByrne@uml.edu</a>
-
-              <!-- Cache-proof CV link: rename the PDF if possible (best), plus version query -->
               <a href="PostDoc_CV_2026.pdf" target="_blank" rel="noopener">CV</a>
-
-              <!-- Fixed LinkedIn URL (added https://) -->
               <a href="https://www.linkedin.com/in/sean-byrne-8b1750122" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-
               <a href="https://github.com/ByrneS45" target="_blank" rel="noopener">GitHub</a>
             </div>
 
@@ -227,7 +192,6 @@
               calculations.
             </p>
 
-            <!-- Added: Nuclear data + computational focus (postdoc-aligned) -->
             <p>
               My research places a strong emphasis on nuclear data: translating experimental observables into reaction
               and decay information, validating results against evaluated datasets (e.g., ENSDF/NNDC), and developing
@@ -240,36 +204,40 @@
       </div>
 
       <!-- =========================
-           Explosive Nucleosynthesis Section
-      ========================= -->
-      <section id="explosive-nucleosynthesis" class="section">
+           Explosive Nucleosynthesis Section (with pathways)
+           ========================= -->
+      <section id="explosive-nucleosynthesis">
         <div class="na-wrap">
           <div class="na-hero">
             <div>
               <h2>Explosive Nucleosynthesis &amp; the Origin of the Elements</h2>
+
               <p>
                 In the final moments of massive stars—and in thermonuclear white-dwarf explosions—temperatures reach billions of kelvin.
                 Nuclear reaction timescales collapse from millions of years to seconds, driving <strong>explosive nucleosynthesis</strong>:
-                rapid burning (O/Ne/Si), α-rich freezeout, and neutron-capture pathways that forge nuclei from the iron group to the actinides.
+                rapid burning (O/Ne/Si), α-rich freezeout, and neutron- and proton-capture pathways that shape the elemental and isotopic
+                patterns we observe today.
               </p>
+
               <p>
                 These events eject freshly synthesized material into the interstellar medium, enriching future generations of stars and planets.
-                The <strong>natural abundances</strong> we measure today are a fossil record of these processes: the Big Bang sets H/He,
-                stellar fusion builds up to the iron peak, and explosive events shape the heavy-element tail.
+                The <strong>natural abundances</strong> in the Solar System are a “fossil record”: Big Bang nucleosynthesis sets H/He,
+                stellar fusion builds up to the iron peak, and explosive events populate much of the heavy-element inventory.
               </p>
+
               <p class="na-note">
                 <span class="na-pill">Core-collapse SNe</span>
                 <span class="na-pill">Type Ia SNe</span>
-                <span class="na-pill">r-process</span>
+                <span class="na-pill">Neutron capture</span>
+                <span class="na-pill">Proton-rich flows</span>
                 <span class="na-pill">Abundance patterns</span>
               </p>
             </div>
 
             <div class="na-card">
               <figure>
-                <!-- Solar-system abundances (CC BY-SA) -->
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/e/e6/SolarSystemAbundances.png"
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/SolarSystemAbundances.png"
                   alt="Solar-system elemental abundances vs atomic number"
                   loading="lazy"
                 />
@@ -283,8 +251,8 @@
               <div class="na-body">
                 <h3>Why abundances look the way they do</h3>
                 <p>
-                  The iron peak reflects nuclear binding-energy stability and efficient production in supernova burning.
-                  The odd-even effect and heavy-element “tail” encode neutron-capture histories and explosive conditions.
+                  The iron peak reflects nuclear binding-energy stability and efficient production in explosive burning.
+                  Odd-even structure and the heavy-element tail encode capture histories and the thermodynamic conditions of the ejecta.
                 </p>
               </div>
             </div>
@@ -293,16 +261,15 @@
           <div class="na-cards">
             <div class="na-card">
               <figure>
-                <!-- Crab Nebula (Public Domain per NASA/ESA Hubble) -->
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/0/00/Crab_Nebula.jpg"
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Crab_Nebula.jpg"
                   alt="Crab Nebula (supernova remnant) mosaic"
                   loading="lazy"
                 />
                 <figcaption>
                   Crab Nebula (M1), supernova remnant. Source:
                   <a href="https://commons.wikimedia.org/wiki/File:Crab_Nebula.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License: <strong>Public Domain</strong> (NASA/ESA Hubble; credit NASA/STScI/ESA as requested).
+                  License: <strong>Public Domain</strong> (NASA/ESA Hubble; credit NASA/STScI/ESA). 
                 </figcaption>
               </figure>
               <div class="na-body">
@@ -316,17 +283,15 @@
 
             <div class="na-card">
               <figure>
-                <!-- Cassiopeia A (No known copyright restrictions via Flickr Commons on Commons page) -->
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/9/96/Cassiopeia_A-_Cassiopeia_A_in_Many_Colors_%282941486784%29.jpg"
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Cassiopeia_A-_Cassiopeia_A_in_Many_Colors_(2941486784).jpg"
                   alt="Cassiopeia A supernova remnant composite"
                   loading="lazy"
                 />
                 <figcaption>
                   Cassiopeia A composite (IR/optical/X-ray). Source:
                   <a href="https://commons.wikimedia.org/wiki/File:Cassiopeia_A-_Cassiopeia_A_in_Many_Colors_(2941486784).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  Marked “No known copyright restrictions” (Smithsonian Institution / Flickr Commons). Credit line (as listed):
-                  NASA/CXC/SAO; NASA/STScI; NASA/JPL-Caltech.
+                  Marked “No known copyright restrictions” (Smithsonian Institution / Flickr Commons).
                 </figcaption>
               </figure>
               <div class="na-body">
@@ -340,9 +305,8 @@
 
             <div class="na-card">
               <figure>
-                <!-- r-process diagram (CC0) -->
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/c/c7/R-process.svg"
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/R-process.svg"
                   alt="r-process schematic"
                   loading="lazy"
                   style="object-fit: contain; background: rgba(255,255,255,0.95);"
@@ -350,20 +314,145 @@
                 <figcaption>
                   r-process schematic. Source:
                   <a href="https://commons.wikimedia.org/wiki/File:R-process.svg" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License: <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>.
+                  License:
+                  <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>.
                 </figcaption>
               </figure>
               <div class="na-body">
-                <h3>Rapid neutron capture</h3>
+                <h3>Rapid neutron capture (r-process)</h3>
                 <p>
-                  In extremely neutron-rich conditions, nuclei climb to high mass numbers via fast captures before β-decays return them toward
-                  stability—building roughly half of the elements heavier than iron.
+                  In extremely neutron-rich conditions, nuclei undergo fast captures before β-decays return them toward stability—building
+                  much of the material heavier than iron.
                 </p>
               </div>
             </div>
           </div>
+
+          <hr class="na-divider" />
+
+          <div class="na-cards two">
+            <div class="na-card">
+              <figure>
+                <img
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Nucleosynthesis_periodic_table.svg"
+                  alt="Periodic table showing origins of elements"
+                  loading="lazy"
+                  style="object-fit: contain; background: rgba(255,255,255,0.98);"
+                />
+                <figcaption>
+                  Periodic table showing the origins of Solar-System elements (inspired by work compiled by Jennifer Johnson). Source:
+                  <a href="https://commons.wikimedia.org/wiki/File:Nucleosynthesis_periodic_table.svg" target="_blank" rel="noopener">Wikimedia Commons</a>.
+                  License:
+                  <a href="https://en.wikipedia.org/wiki/GNU_Free_Documentation_License" target="_blank" rel="noopener">GFDL 1.2+</a>.
+                </figcaption>
+              </figure>
+              <div class="na-body">
+                <h3>“Origin map” of the periodic table</h3>
+                <p>
+                  A compact way to visualize how different sites contribute: Big Bang, stellar fusion, explosive massive stars, and
+                  long-lived low-mass stars (plus cosmic-ray spallation for light elements like Li–Be–B).
+                </p>
+              </div>
+            </div>
+
+            <div class="na-card">
+              <figure>
+                <img
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/S_and_r_process.png"
+                  alt="s-process vs r-process schematic chart"
+                  loading="lazy"
+                  style="object-fit: contain; background: rgba(255,255,255,0.98);"
+                />
+                <figcaption>
+                  s-process vs r-process schematic. Source:
+                  <a href="https://commons.wikimedia.org/wiki/File:S_and_r_process.png" target="_blank" rel="noopener">Wikimedia Commons</a>.
+                  License: <strong>Public Domain (PD-self)</strong>.
+                </figcaption>
+              </figure>
+              <div class="na-body">
+                <h3>Slow vs rapid capture</h3>
+                <p>
+                  The <strong>s-process</strong> follows the valley of stability (captures are slow compared to β-decays), while the
+                  <strong>r-process</strong> runs far to the neutron-rich side (captures are fast), then decays back toward stability.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="na-cards">
+            <div class="na-card">
+              <figure>
+                <img
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Isotopic_Abundance_bubble_chart.png"
+                  alt="Bubble chart of isotopic abundances"
+                  loading="lazy"
+                  style="object-fit: contain; background: rgba(255,255,255,0.98);"
+                />
+                <figcaption>
+                  Bubble chart of isotopic abundances (area ∝ abundance; color indicates origin categories). Source:
+                  <a href="https://commons.wikimedia.org/wiki/File:Isotopic_Abundance_bubble_chart.png" target="_blank" rel="noopener">Wikimedia Commons</a>.
+                  License:
+                  <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+                </figcaption>
+              </figure>
+              <div class="na-body">
+                <h3>Abundances by nuclide</h3>
+                <p>
+                  Isotopic abundances highlight what’s common (H, He, O, Fe) and what’s rare—often controlled by “bottlenecks” in reaction
+                  flows and by the availability of neutrons/protons in explosive environments.
+                </p>
+              </div>
+            </div>
+
+            <div class="na-card">
+              <div class="na-body">
+                <h3>Proton-rich pathways (p / rp / νp)</h3>
+                <p>
+                  <strong>rp-process</strong>: rapid proton captures and β<sup>+</sup> decays in hot, H-rich environments (classically X-ray bursts),
+                  pushing along the proton-rich side until “waiting points” slow the flow.
+                </p>
+                <p>
+                  <strong>νp-process (vp)</strong>: in proton-rich supernova outflows, neutrino interactions can supply free neutrons that
+                  enable (n,p) reactions to bypass rp waiting points, extending synthesis to heavier nuclei.
+                </p>
+                <p>
+                  <strong>p-process (γ-process)</strong>: production of certain proton-rich stable isotopes (“p-nuclei”) mainly via
+                  photodisintegration ((γ,n), (γ,p), (γ,α)) on pre-existing heavy seeds in hot explosive layers.
+                </p>
+              </div>
+            </div>
+
+            <div class="na-card">
+              <div class="na-body">
+                <h3>Neutron-capture pathways (s / i / r)</h3>
+                <p>
+                  <strong>s-process</strong>: “slow” captures (relative to β-decay) in quiescent stellar burning; tends to follow stable isotopes.
+                </p>
+                <p>
+                  <strong>i-process</strong>: “intermediate” neutron flux between s and r, producing distinctive abundance patterns that can
+                  explain some observed stellar compositions; conceptually sits between the two extremes in capture rate.
+                </p>
+                <p>
+                  <strong>r-process</strong>: “rapid” captures in very neutron-rich conditions, driving far from stability and then β-decaying back.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="na-note">
+            Pathway cheat sheet: <span class="na-pill">s = slow n-capture</span>
+            <span class="na-pill">i = intermediate n-capture</span>
+            <span class="na-pill">r = rapid n-capture</span>
+            <span class="na-pill">rp = rapid p-capture</span>
+            <span class="na-pill">νp (vp) = neutrino-aided proton-rich flow</span>
+            <span class="na-pill">p (γ) = photodisintegration-driven p-nuclei</span>
+          </p>
         </div>
       </section>
+      <!-- =========================
+           End Explosive Nucleosynthesis Section
+           ========================= -->
+
 
       <div class="section">
         <h2>Education</h2>
