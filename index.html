@@ -138,7 +138,7 @@
     .na-hero {
       display: grid;
       gap: 1.25rem;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1fr;
       align-items: start;
     }
 
@@ -155,12 +155,8 @@
     .na-cards {
       display: grid;
       gap: 1.1rem;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       margin-top: 1.25rem;
-    }
-
-    .na-cards.two {
-      grid-template-columns: repeat(2, 1fr);
     }
 
     .na-card {
@@ -176,7 +172,7 @@
 
     .na-card img {
       width: 100%;
-      height: 230px;
+      height: 220px;
       object-fit: cover;
       display: block;
     }
@@ -187,7 +183,7 @@
 
     .na-card h3 {
       margin: 0 0 0.5rem 0;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     .na-card p {
@@ -200,12 +196,6 @@
       font-size: 0.85rem;
       line-height: 1.4;
       color: rgba(0,0,0,0.75);
-    }
-
-    .na-card a {
-      color: inherit;
-      text-decoration: underline;
-      text-underline-offset: 2px;
     }
 
     .na-note {
@@ -221,6 +211,7 @@
       border: 1px solid rgba(0,0,0,0.14);
       font-size: 0.85rem;
       margin: 0.15rem 0.35rem 0.15rem 0;
+      background: rgba(255,255,255,0.65);
     }
 
     .na-divider {
@@ -230,10 +221,18 @@
       background: rgba(0,0,0,0.12);
     }
 
-    @media (max-width: 920px) {
-      .na-hero { grid-template-columns: 1fr; }
+    .na-wide img {
+      height: 250px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.98);
+    }
+
+    @media (max-width: 1100px) {
+      .na-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 720px) {
       .na-cards { grid-template-columns: 1fr; }
-      .na-cards.two { grid-template-columns: 1fr; }
       .na-card img { height: 260px; }
     }
   </style>
@@ -287,125 +286,120 @@
       </div>
 
       <!-- =========================
-           Explosive Nucleosynthesis Section (fixed links)
+           Explosive Nucleosynthesis Section (LOCAL IMAGES)
+           Put the images in: assets/nucleo/
+           - origin_periodic_table.png  (the one you just shared)
+           - nucleo_image2.png
+           - nucleo_image3.png
+           - nucleo_image4.png
            ========================= -->
-      <section id="explosive-nucleosynthesis">
+      <section id="explosive-nucleosynthesis" class="section">
         <div class="na-wrap">
           <div class="na-hero">
             <div>
-              <h2>Explosive Nucleosynthesis &amp; the Origin of the Elements</h2>
+              <h2>🌟 Explosive Nucleosynthesis, Supernovae, and the Origin of the Elements</h2>
 
               <p>
-                In the final moments of massive stars—and in thermonuclear white-dwarf explosions—temperatures reach billions of kelvin.
-                Nuclear reaction timescales collapse from millions of years to seconds, driving <strong>explosive nucleosynthesis</strong>:
-                rapid burning (O/Ne/Si), α-rich freezeout, and neutron- and proton-capture pathways that shape the elemental and isotopic
-                patterns we observe today.
-              </p>
-
-              <p>
-                These events eject freshly synthesized material into the interstellar medium, enriching future generations of stars and planets.
-                The <strong>natural abundances</strong> in the Solar System are a “fossil record”: Big Bang nucleosynthesis sets H/He,
-                stellar fusion builds up to the iron peak, and explosive events populate much of the heavy-element inventory.
+                Explosive nucleosynthesis is the rapid production of new atomic nuclei during extreme astrophysical events.
+                Unlike the slow fusion processes that power stars for millions of years, explosive nucleosynthesis can occur in
+                seconds under enormous temperatures (billions of Kelvin) and densities.
               </p>
 
               <p class="na-note">
                 <span class="na-pill">Core-collapse SNe</span>
                 <span class="na-pill">Type Ia SNe</span>
-                <span class="na-pill">Neutron capture</span>
-                <span class="na-pill">Proton-rich flows</span>
-                <span class="na-pill">Abundance patterns</span>
+                <span class="na-pill">p / γ-process</span>
+                <span class="na-pill">rp-process</span>
+                <span class="na-pill">νp-process</span>
+                <span class="na-pill">s-process</span>
+                <span class="na-pill">i-process</span>
+                <span class="na-pill">r-process</span>
               </p>
-            </div>
-
-            <div class="na-card">
-              <figure>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/e/e6/SolarSystemAbundances.png"
-                  alt="Solar-system elemental abundances vs atomic number"
-                  loading="lazy"
-                />
-                <figcaption>
-                  Solar-system elemental abundances (log scale). Source:
-                  <a href="https://commons.wikimedia.org/wiki/File:SolarSystemAbundances.png" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License:
-                  <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>.
-                </figcaption>
-              </figure>
-              <div class="na-body">
-                <h3>Why abundances look the way they do</h3>
-                <p>
-                  The iron peak reflects nuclear binding-energy stability and efficient production in explosive burning.
-                  Odd-even structure and the heavy-element tail encode capture histories and the thermodynamic conditions of the ejecta.
-                </p>
-              </div>
             </div>
           </div>
 
           <div class="na-cards">
-            <div class="na-card">
+            <!-- Card 1: REPLACED periodic table -->
+            <div class="na-card na-wide">
               <figure>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/0/00/Crab_Nebula.jpg"
-                  alt="Crab Nebula (supernova remnant) mosaic"
+                  src="assets/nucleo/origin_periodic_table.png"
+                  alt="Periodic table showing the astrophysical origins of the elements"
                   loading="lazy"
                 />
                 <figcaption>
-                  Crab Nebula (M1), supernova remnant. Source:
-                  <a href="https://commons.wikimedia.org/wiki/File:Crab_Nebula.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License: <strong>Public Domain</strong> (NASA/ESA Hubble; credit NASA/STScI/ESA).
+                  Periodic table colored by dominant production sites (Big Bang, stellar burning, supernovae, cosmic-ray spallation, etc.).
+                  <!-- Add source/credit here if you have it. -->
                 </figcaption>
               </figure>
               <div class="na-body">
-                <h3>Supernovae: element factories</h3>
+                <h3>Where the elements come from</h3>
                 <p>
-                  Shock heating triggers explosive burning, while expanding ejecta seed the galaxy with newly made nuclei—material that later
-                  becomes stars, planets, and ultimately us.
+                  The Solar System’s composition reflects a mixture of Big Bang nucleosynthesis, long-lived stellar fusion,
+                  and explosive events that produce and eject newly synthesized material into the galaxy.
                 </p>
               </div>
             </div>
 
+            <!-- Card 2 -->
             <div class="na-card">
               <figure>
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/9/96/Cassiopeia_A-_Cassiopeia_A_in_Many_Colors_%282941486784%29.jpg"
-                  alt="Cassiopeia A supernova remnant composite"
+                  src="assets/nucleo/nucleo_image2.png"
+                  alt="Explosive burning stages / nucleosynthesis schematic"
                   loading="lazy"
                 />
                 <figcaption>
-                  Cassiopeia A composite (IR/optical/X-ray). Source:
-                  <a href="https://commons.wikimedia.org/wiki/File:Cassiopeia_A-_Cassiopeia_A_in_Many_Colors_(2941486784).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  Marked “No known copyright restrictions” (Smithsonian Institution / Flickr Commons).
+                  Explosive burning and layered nucleosynthesis schematic (image set provided for the site).
                 </figcaption>
               </figure>
               <div class="na-body">
-                <h3>What remnants reveal</h3>
+                <h3>Explosive burning &amp; the iron peak</h3>
                 <p>
-                  Multi-wavelength images map different temperatures and elements in the debris, linking observed structures to explosion
-                  dynamics and nucleosynthesis yields.
+                  Shock heating can drive O/Ne/Si burning and α-rich freezeout, efficiently producing iron-group nuclei and
+                  setting the “iron peak” seen in abundance patterns.
                 </p>
               </div>
             </div>
 
+            <!-- Card 3 -->
             <div class="na-card">
               <figure>
                 <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/R-process.svg?width=900"
-                  alt="r-process schematic"
+                  src="assets/nucleo/nucleo_image3.png"
+                  alt="Reaction flow / network style graphic"
                   loading="lazy"
-                  style="object-fit: contain; background: rgba(255,255,255,0.95);"
                 />
                 <figcaption>
-                  r-process schematic. Source:
-                  <a href="https://commons.wikimedia.org/wiki/File:R-process.svg" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License:
-                  <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a>.
+                  Reaction-flow / network-style illustration (image set provided for the site).
                 </figcaption>
               </figure>
               <div class="na-body">
-                <h3>Rapid neutron capture (r-process)</h3>
+                <h3>Pathways on the chart of nuclides</h3>
                 <p>
-                  In extremely neutron-rich conditions, nuclei undergo fast captures before β-decays return them toward stability—building
-                  much of the material heavier than iron.
+                  Which path dominates depends on temperature, density, and the availability of neutrons vs protons:
+                  captures compete with β-decays, photodisintegration, and neutrino interactions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="na-card">
+              <figure>
+                <img
+                  src="assets/nucleo/nucleo_image4.png"
+                  alt="r-process abundance / path illustration"
+                  loading="lazy"
+                />
+                <figcaption>
+                  r-process illustration / abundance pattern (image set provided for the site).
+                </figcaption>
+              </figure>
+              <div class="na-body">
+                <h3>Neutron capture &amp; heavy elements</h3>
+                <p>
+                  The r-process proceeds far from stability under extreme neutron richness, then β-decays back toward stable isotopes—
+                  generating much of the heavy-element inventory.
                 </p>
               </div>
             </div>
@@ -413,123 +407,44 @@
 
           <hr class="na-divider" />
 
-          <div class="na-cards two">
+          <div class="na-cards" style="grid-template-columns: repeat(2, 1fr);">
             <div class="na-card">
-              <figure>
-                <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Nucleosynthesis_periodic_table.svg?width=1200"
-                  alt="Periodic table showing origins of elements"
-                  loading="lazy"
-                  style="object-fit: contain; background: rgba(255,255,255,0.98);"
-                />
-                <figcaption>
-                  Periodic table showing the origins of Solar-System elements. Source:
-                  <a href="https://commons.wikimedia.org/wiki/File:Nucleosynthesis_periodic_table.svg" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License (see file page for exact version):
-                  <a href="https://en.wikipedia.org/wiki/GNU_Free_Documentation_License" target="_blank" rel="noopener">GFDL</a>.
-                </figcaption>
-              </figure>
               <div class="na-body">
-                <h3>“Origin map” of the periodic table</h3>
+                <h3>Proton-rich pathways: p, rp, and νp</h3>
                 <p>
-                  A compact way to visualize how different sites contribute: Big Bang, stellar fusion, explosive massive stars, and
-                  long-lived low-mass stars (plus cosmic-ray spallation for light elements like Li–Be–B).
+                  <strong>p-process (γ-process):</strong> produces certain proton-rich stable isotopes (“p-nuclei”) mainly through
+                  photodisintegration reactions ((γ,n), (γ,p), (γ,α)) on pre-existing heavy seeds in hot, explosive layers.
+                </p>
+                <p>
+                  <strong>rp-process:</strong> rapid proton captures and β<sup>+</sup> decays in hot, H-rich environments (classically X-ray bursts),
+                  pushing material along the proton-rich side until “waiting points” slow the flow.
+                </p>
+                <p>
+                  <strong>νp-process:</strong> in proton-rich supernova outflows, neutrino interactions supply a small neutron density that enables
+                  (n,p) reactions to bypass rp waiting points, extending synthesis to heavier nuclei.
                 </p>
               </div>
             </div>
 
             <div class="na-card">
-              <figure>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/1/1d/S_and_r_process.png"
-                  alt="s-process vs r-process schematic chart"
-                  loading="lazy"
-                  style="object-fit: contain; background: rgba(255,255,255,0.98);"
-                />
-                <figcaption>
-                  s-process vs r-process schematic. Source:
-                  <a href="https://commons.wikimedia.org/wiki/File:S_and_r_process.png" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License: <strong>Public Domain (PD-self)</strong>.
-                </figcaption>
-              </figure>
               <div class="na-body">
-                <h3>Slow vs rapid capture</h3>
+                <h3>Neutron-capture pathways: s, i, and r</h3>
                 <p>
-                  The <strong>s-process</strong> follows the valley of stability (captures are slow compared to β-decays), while the
-                  <strong>r-process</strong> runs far to the neutron-rich side (captures are fast), then decays back toward stability.
+                  <strong>s-process:</strong> “slow” neutron captures (relative to β-decay) in stellar burning; the path stays near the valley of stability.
+                </p>
+                <p>
+                  <strong>i-process:</strong> “intermediate” neutron flux between s and r, producing distinctive abundance patterns that can explain
+                  some chemically peculiar stars; conceptually sits between the two extremes in capture rate.
+                </p>
+                <p>
+                  <strong>r-process:</strong> “rapid” neutron captures in very neutron-rich conditions, driving far from stability and then β-decaying back.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="na-cards">
-            <div class="na-card">
-              <figure>
-                <img
-                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Isotopic_Abundance_bubble_chart.png?width=1200"
-                  alt="Bubble chart of isotopic abundances"
-                  loading="lazy"
-                  style="object-fit: contain; background: rgba(255,255,255,0.98);"
-                />
-                <figcaption>
-                  Bubble chart of isotopic abundances. Source:
-                  <a href="https://commons.wikimedia.org/wiki/File:Isotopic_Abundance_bubble_chart.png" target="_blank" rel="noopener">Wikimedia Commons</a>.
-                  License:
-                  <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
-                </figcaption>
-              </figure>
-              <div class="na-body">
-                <h3>Abundances by nuclide</h3>
-                <p>
-                  Isotopic abundances highlight what’s common (H, He, O, Fe) and what’s rare—often controlled by “bottlenecks” in reaction
-                  flows and by the availability of neutrons/protons in explosive environments.
-                </p>
-              </div>
-            </div>
-
-            <div class="na-card">
-              <div class="na-body">
-                <h3>Proton-rich pathways (p / rp / νp)</h3>
-                <p>
-                  <strong>rp-process</strong>: rapid proton captures and β<sup>+</sup> decays in hot, H-rich environments (classically X-ray bursts),
-                  pushing along the proton-rich side until “waiting points” slow the flow.
-                </p>
-                <p>
-                  <strong>νp-process (vp)</strong>: in proton-rich supernova outflows, neutrino interactions can supply free neutrons that
-                  enable (n,p) reactions to bypass rp waiting points, extending synthesis to heavier nuclei.
-                </p>
-                <p>
-                  <strong>p-process (γ-process)</strong>: production of certain proton-rich stable isotopes (“p-nuclei”) mainly via
-                  photodisintegration ((γ,n), (γ,p), (γ,α)) on pre-existing heavy seeds in hot explosive layers.
-                </p>
-              </div>
-            </div>
-
-            <div class="na-card">
-              <div class="na-body">
-                <h3>Neutron-capture pathways (s / i / r)</h3>
-                <p>
-                  <strong>s-process</strong>: “slow” captures (relative to β-decay) in quiescent stellar burning; tends to follow stable isotopes.
-                </p>
-                <p>
-                  <strong>i-process</strong>: “intermediate” neutron flux between s and r, producing distinctive abundance patterns that can
-                  explain some observed stellar compositions; conceptually sits between the two extremes in capture rate.
-                </p>
-                <p>
-                  <strong>r-process</strong>: “rapid” captures in very neutron-rich conditions, driving far from stability and then β-decaying back.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <p class="na-note">
-            Pathway cheat sheet:
-            <span class="na-pill">s = slow n-capture</span>
-            <span class="na-pill">i = intermediate n-capture</span>
-            <span class="na-pill">r = rapid n-capture</span>
-            <span class="na-pill">rp = rapid p-capture</span>
-            <span class="na-pill">νp (vp) = neutrino-aided proton-rich flow</span>
-            <span class="na-pill">p (γ) = photodisintegration-driven p-nuclei</span>
+          <p class="na-note" style="margin-top: 1rem;">
+            Tip: For GitHub Pages reliability, using <strong>local images</strong> (as above) avoids blocked redirects and SVG rendering issues.
           </p>
         </div>
       </section>
@@ -719,5 +634,4 @@
   </div>
 </body>
 </html>
-
 
